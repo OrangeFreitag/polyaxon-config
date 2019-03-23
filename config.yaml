@@ -14,4 +14,17 @@ user:
 postgresql:
   persistence:
     enabled: true
-    existingClaim: polyaxon  
+    existingClaim: "polyaxon-pvc"
+
+persistence:
+  data:
+    common-voice:
+      mountPath: "/data/common-voice"
+      existingClaim: "common-voice-pvc"
+    shared-task:
+      mountPath: "/data/shared-task"
+      existingClaim: "shared-task-pvc"
+    data:
+      mountPath: "/data/random-data"
+      existingClaim: "random-data-pvc"      
+
