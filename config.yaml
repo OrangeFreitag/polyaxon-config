@@ -1,0 +1,17 @@
+rbac:
+  enabled: true
+
+ingress:
+  enabled: false
+
+serviceType: LoadBalancer
+
+user:
+  username: "root"
+  email: "root@polyaxon.local"
+  password: "kaldi"
+
+postgresql:
+  persistence:
+    enabled: true
+    existingClaim: polyaxon  
